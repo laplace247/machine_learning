@@ -1,0 +1,1 @@
+Usar una red neuronal para predecir si un estudiante aprueba o no, en base a las horas de estudio.
