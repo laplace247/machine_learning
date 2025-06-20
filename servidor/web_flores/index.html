@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de Flores con TensorFlow.js</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Clasificador de Flores</h1>
+        <p>Sube una imagen y la IA te dirá qué flor es.</p>
+        
+        <div class="uploader-area">
+            <!-- La vista previa de la imagen se mostrará aquí -->
+            <img id="image-preview" src="#" alt="Vista previa de la imagen">
+            
+            <!-- Input de archivo (oculto) que se activa con el label -->
+            <input type="file" id="image-selector" accept="image/*">
+            
+            <!-- Botón visible para el usuario -->
+            <label for="image-selector" id="uploader-label">Elige una imagen</label>
+        </div>
+        
+        <!-- El resultado de la predicción aparecerá aquí -->
+        <div id="prediction">Esperando una imagen...</div>
+    </div>
+
+    <!-- Carga la librería de TensorFlow.js desde la red de distribución de contenido (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    
+    <!-- Carga nuestro propio script con la lógica de la aplicación -->
+    <script src="script.js"></script>
+
+</body>
+</html>
