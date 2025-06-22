@@ -1,4 +1,4 @@
-# Clasificador de Flores con IA
+# Clasificador de Flores con M. Learning
 
 Un clasificador de imágenes de flores desarrollado con TensorFlow.js que funciona directamente en el navegador.
 
