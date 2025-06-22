@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Clasificador de Flores</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0/dist/tf.min.js"></script>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clasificador de Flores</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0/dist/tf.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Clasificador de Flores</h1>
-  <input type="file" id="imageInput" accept="image/*" />
-  <br/><br/>
-  <img id="preview" src="" alt="Vista previa" width="200" />
-  <p id="resultado">Resultado: ...</p>
 
-  <script src="script.js"></script>
+    <main class="container">
+        <div class="header">
+            <h1>Clasificador de Flores</h1>
+            <p>Sube una imagen y la IA te dirá de qué flor se trata</p>
+        </div>
+
+        <div class="uploader-wrapper">
+            <input type="file" id="imageInput" accept="image/*" />
+            <label for="imageInput" class="custom-file-button">Elegir una Imagen</label>
+        </div>
+
+        <div class="result-area">
+            <img id="preview" src="" alt="Vista previa de la imagen" />
+            <p id="resultado">Esperando una imagen...</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
-

@@ -1,10 +1,10 @@
-const classes = ['daisy', 'dandelion', 'roses', 'sunflowers', 'tulips']; // Ajusta esto si tienes otros nombres
+const classes = ['margarita', 'diente de león', 'rosas', 'girasol', 'tulipan']; // Ajusta esto si tienes otros nombres
 
 let model;
 
 async function cargarModelo() {
   model = await tf.loadLayersModel('./modelo_tfjs/model.json');
-  console.log("✅ Modelo cargado");
+  console.log("Modelo cargado.");
 }
 
 document.getElementById('imageInput').addEventListener('change', async function (e) {
@@ -17,6 +17,8 @@ document.getElementById('imageInput').addEventListener('change', async function 
   reader.onload = function (event) {
     img.src = event.target.result;
     document.getElementById('preview').src = img.src;
+    document.getElementById('preview').style.display = 'block';
+    document.getElementById('resultado').textContent = 'Procesando...';
   };
 
   reader.readAsDataURL(file);
