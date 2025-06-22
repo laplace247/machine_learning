@@ -51,12 +51,12 @@ tensorflowjs_converter --input_format=keras model.h5 model_tfjs/
 
 1. **Iniciar servidor local**
 ```bash
-python -m http.server 8000
+npx http-server . -p 8080 
 ```
 
 2. **Abrir navegador**
 ```
-http://localhost:8000
+http://127.0.0.1:8080
 ```
 
 3. **Subir imagen**
