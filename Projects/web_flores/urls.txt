@@ -1,0 +1,15 @@
+URL DE DATASETS FLOWERS
+https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
+
+URL DE CUADERNO GOOGLE COLAB
+https://colab.research.google.com/drive/1OUb_1kpZhHwZ5tGGzodAl5HIgsDW5xBD?usp=sharing
+
+URL DE FOLDER "web_flores"
+https://drive.google.com/drive/folders/1KAM2eaZ7ZqHaHeA837V7tJrT81qc0XNP?usp=
+
+URL DE GITHUB 
+https://github.com/laplace247/machine_learning/tree/main/Projects/web_flores
+
+URL DEL MODELO
+https://anonymfile.com/LNgn1/modelo.h5
+

@@ -31,20 +31,32 @@ Un clasificador de imágenes de flores desarrollado con TensorFlow.js que funcio
 git clone [tu-repositorio]
 cd web_flores
 ```
-
-2. **Activar entorno conda**
+2. **Instalar miniconda/anaconda en WSL**
 ```bash
+sudo apt install miniconda
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+```
+3. **Crear y activar entorno conda**
+```bash
+conda create -n senati python=3.10
 conda activate tu_entorno
 ```
 
-3. **Instalar dependencias**
+4. **Instalar dependencias**
 ```bash
 pip install tensorflowjs
 ```
 
-4. **Convertir modelo**
+5. **Montar el modelo**
 ```bash
-tensorflowjs_converter --input_format=keras model.h5 model_tfjs/
+cp /mnt/c/Users/HP/Downloads/web_flores/modelo.h5 ~/modelo.h5
+```
+
+6. **Convertir modelo**
+```bash
+tensorflowjs_converter --input_format=keras modelo.h5 modelo_tfjs/
+
 ```
 
 ## Uso
@@ -67,8 +79,9 @@ http://127.0.0.1:8080
 
 ```
 web_flores/
-├── model.h5              # Modelo Keras original
-├── model_tfjs/           # Modelo convertido para web
+├── modelo.h5             # Modelo Keras original
+├── modelo_tfjs/          # Modelo convertido para web
+├── notebook/             # Cuaderno de Entrenamiento y Prueba
 ├── index.html            # Interfaz principal
 ├── script.js             # Lógica de clasificación
 ├── styles.css            # Estilos modernos
@@ -77,6 +90,14 @@ web_flores/
 1. **Descargar model.h5 (como atajo)**
 ```
 https://anonymfile.com/LNgn1/modelo.h5
+```
+2. **Descargar dataset de flores**
+```
+https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
+```
+3. **Descargar dataset de flores**
+```
+https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
 ```
 
 ## Tecnologías
