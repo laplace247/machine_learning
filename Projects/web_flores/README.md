@@ -40,7 +40,7 @@ chmod +x Miniconda3-latest-Linux-x86_64.sh
 3. **Crear y activar entorno conda**
 ```bash
 conda create -n senati python=3.10
-conda activate tu_entorno
+conda activate senati
 ```
 
 4. **Instalar dependencias**
