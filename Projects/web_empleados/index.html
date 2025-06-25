@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Rotación de Empleados</title>
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Análisis de Rotación de Empleados</h1>
+        <form id="churn-form">
+            <div class="form-group">
+                <label for="age">Edad</label>
+                <input type="number" id="age" value="35" required>
+            </div>
+            <div class="form-group">
+                <label for="monthly-income">Ingreso Mensual</label>
+                <input type="number" id="monthly-income" value="5000" required>
+            </div>
+            <div class="form-group">
+                <label for="job-role">Cargo Actual</label>
+                <select id="job-role" required>
+                    <option value="Sales Executive" selected>Ejecutivo de Ventas</option>
+                    <option value="Research Scientist">Científico de Investigación</option>
+                    <option value="Laboratory Technician">Técnico de Laboratorio</option>
+                    <option value="Manufacturing Director">Director de Manufactura</option>
+                    <option value="Healthcare Representative">Representante de Salud</option>
+                    <option value="Manager">Gerente</option>
+                    <option value="Sales Representative">Representante de Ventas</option>
+                    <option value="Research Director">Director de Investigación</option>
+                    <option value="Human Resources">Recursos Humanos</option>
+                </select>
+            </div>
+             <div class="form-group">
+                <label for="total-working-years">Años de Experiencia</label>
+                <input type="number" id="total-working-years" value="10" required>
+            </div>
+             <div class="form-group">
+                <label for="years-at-company">Años en la Empresa</label>
+                <input type="number" id="years-at-company" value="3" required>
+            </div>
+            <div class="form-group">
+                <label for="overtime">¿Hace horas extra?</label>
+                <select id="overtime" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Sí</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="business-travel">¿Viaja por trabajo?</label>
+                <select id="business-travel" required>
+                    <option value="Travel_Frequently">Frecuentemente</option>
+                    <option value="Travel_Rarely" selected>Rara vez</option>
+                    <option value="Non-Travel">No viajan</option>
+                </select>
+            </div>
+            <button type="submit">¿Este empleado está en riesgo de irse?</button>
+        </form>
+        <div id="loader" class="loader"></div>
+        <div id="resultado"></div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
