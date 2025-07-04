@@ -60,7 +60,6 @@ El notebook está organizado en los siguientes pasos lógicos:
 5.  **Paso 5: Compilación del Modelo:** Se configura el modelo para el entrenamiento, especificando el optimizador y la función de pérdida.
 6.  **Paso 6: Entrenamiento:** Se entrena el modelo con los datos usando la función `model.fit()`.
 7.  **Paso 7: Visualización de Resultados:** Se dibuja la línea de regresión sobre los datos originales para mostrar el ajuste logrado.
-8.  **Paso 8 (Extra): Predicción de un Nuevo Valor:** Se demuestra cómo usar el modelo para hacer una nueva predicción.
 
 ## Resultados y Análisis
 El resultado principal de la práctica es un gráfico que superpone los datos reales (puntos azules) con la línea de regresión aprendida por el modelo (línea roja).
