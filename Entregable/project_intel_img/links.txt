@@ -1,0 +1,3 @@
+URL DATASET: https://www.kaggle.com/datasets/puneet6060/intel-image-classification
+
+URL GOOGLE COLAB: https://colab.research.google.com/drive/1y4DZNDMMzVE6uRyJM6fPBPLL6cOkeKGm?usp=sharing
