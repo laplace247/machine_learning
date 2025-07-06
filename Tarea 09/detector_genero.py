@@ -1,4 +1,3 @@
-# Descripción: Este script utiliza OpenCV y cvlib para detectar rostros en tiempo real desde la cámara web
 import cv2
 import cvlib as cv
 import numpy as np
@@ -87,7 +86,7 @@ while True:
         cv2.imwrite(nombre_archivo, frame)
         print(f"¡Imagen guardada como '{nombre_archivo}'!")
         break
-
+    
 # Liberar los recursos
 webcam.release()
 cv2.destroyAllWindows()
