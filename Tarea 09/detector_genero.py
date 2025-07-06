@@ -1,3 +1,4 @@
+# Descripción: Este script utiliza OpenCV y cvlib para detectar rostros en tiempo real desde la cámara web
 import cv2
 import cvlib as cv
 import numpy as np
