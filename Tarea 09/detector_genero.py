@@ -21,6 +21,7 @@ while True:
         break
 
     # Detectar rostros en el frame actual
+
     # La función detect_face de cvlib devuelve dos cosas:
     # faces: una lista de coordenadas [startX, startY, endX, endY] para cada rostro.
     # confidences: una lista con la confianza de cada detección.
@@ -38,8 +39,8 @@ while True:
         cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 255, 0), 2)
 
         # Predecir el género del rostro detectado
+
         # Recortar la región del rostro del frame. 
-        # Añadimos un padding para que el modelo de género tenga un poco más de contexto.
         # Nos aseguramos de no salirnos de los límites de la imagen con max(0, ...) y min(width/height, ...)
         face_crop = np.copy(frame[max(0, startY-padding):min(endY+padding, frame.shape[0]-1), 
                                   max(0, startX-padding):min(endX+padding, frame.shape[1]-1)])
@@ -49,9 +50,10 @@ while True:
             continue
 
         # Aplicar el modelo de predicción de género
-        # La función devuelve:
-        #   - gender: una lista de géneros predichos (en este caso, solo uno)
-        #   - confidence: la confianza de la predicción
+
+        # La función devuelve dos cosas:
+        # gender: lista de géneros predichos (en este caso, solo uno)
+        # confidence: la confianza de la predicción
         try:
             gender, conf_gender = cv.detect_gender(face_crop)
             # Obtenemos la etiqueta y la confianza del primer (y único) resultado
@@ -64,6 +66,7 @@ while True:
             continue
 
         # Crear la etiqueta para mostrar
+
         # Formateamos la etiqueta para mostrarla en pantalla
         # Ejemplo: "Male (98.5%)"
         label = f"{gender_label} ({gender_confidence*100:.1f}%)"
