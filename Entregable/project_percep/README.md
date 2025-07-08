@@ -19,7 +19,35 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
     ```bash
     cd RUTA/A/TU/PROYECTO_CELSIUS_WEB
     ```
-
+    **Crear tu Entorno Virtual en miniconda**
+    ```bash
+    conda create --name tf-env python=3.10 tensorflow -y
+    ```
+    **Activar tu Nuevo Entorno**
+    ```bash
+    conda activate tf-env
+    ```
+    **Actualiza y verifica la ultima version pip**
+    ```bash
+    python -m pip install --upgrade pip setuptools wheel
+    pip --version
+    ```
+    **Instalar tensorflowjs**
+    ```bash
+    pip install tensorflowjs
+    ```
+    PDTA: Si te sale error prueba este comando:
+    ```bash
+    pip install tensorflow==2.15.0 tensorflowjs==4.22.0 --use-deprecated=legacy-resolver
+    ```
+    **Verificar si tienes tensorflowjs**
+    ```bash
+    pip show tensorflowjs
+    ```
+    **Exportar el modelo .h5 a Tensorflowjs**
+    ```bash
+    tensorflowjs_converter --input_format=keras model.h5 modelo_tfjs/
+    ```
 3.  **Iniciar un Servidor Web Local:**
     Python viene con un servidor simple incorporado que es perfecto para esto. Ejecuta el siguiente comando:
     ```bash
