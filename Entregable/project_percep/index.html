@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius a Fahrenheit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Icono de Robot SVG -->
+        <svg class="robot-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 0 1 2 2v2h-4V4a2 2 0 0 1 2-2zM6.293 8.293A1 1 0 0 1 7 8h10a1 1 0 0 1 .707.293l2 2A1 1 0 0 1 20 11v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6a1 1 0 0 1 .293-.707l2-2zM8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+        <!-- Título y subtítulo -->
+        <h1>Celsius a Fahrenheit</h1>
+        <p class="subtitle">Conversión de grados celsius a fahrenheit utilizando TensorFlow.js</p>
+        <!-- Caja de conversión -->
+        <div class="converter-box">
+            <label id="celsius-label" for="celsius-slider">Grados Celsius: 20</label>
+            <input type="range" id="celsius-slider" min="-40" max="100" value="20" step="1">
+            <p class="slider-description">Desliza para cambiar el valor de grados celsius</p>
+            
+            <div class="result-box">
+                <p class="result-title">Resultado</p>
+                <p id="result-text">20 celsius son 68 fahrenheit!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Cargar TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <!-- Cargar nuestro script -->
+    <script src="script.js"></script>
+</body>
+</html>

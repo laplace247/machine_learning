@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#app-container {
+    background-color: #1e1e1e;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    border: 1px solid #333;
+}
+
+.robot-icon {
+    width: 60px;
+    height: 60px;
+    color: #4caf50;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #a0a0a0;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.subtitle a {
+    color: #29b6f6;
+    text-decoration: none;
+}
+
+.converter-box {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+#celsius-label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #444;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #29b6f6;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #1e1e1e;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #29b6f6;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #1e1e1e;
+}
+
+.slider-description {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+.result-box {
+    border-top: 1px solid #444;
+    padding-top: 1.5rem;
+}
+
+.result-title {
+    font-size: 1rem;
+    color: #a0a0a0;
+    margin: 0;
+}
+
+#result-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4caf50;
+    margin-top: 0.5rem;
+    min-height: 3rem;
+}
