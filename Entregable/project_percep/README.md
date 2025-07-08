@@ -43,7 +43,7 @@ project_percep/
 ├── style.css # Los estilos visuales para darle una apariencia moderna.
 ├── script.js # La lógica de la aplicación (el cerebro).
 │
-└── celsius_model_tfjs/ # El modelo de IA convertido para la web.
+└── model_tfjs/ # El modelo de IA convertido para la web.
 ├── model.json # Describe la arquitectura de la red neuronal.
 └── *.bin # Contiene los pesos (el "conocimiento") del modelo.
 ```
