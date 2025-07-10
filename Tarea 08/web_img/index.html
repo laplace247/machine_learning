@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de Lenguaje de Señas (ASL)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Intérprete de Señas IA 🤟</h1>
+        <p>Sube una imagen de una mano haciendo una seña del alfabeto o un número (ASL) y la IA intentará reconocerla.</p>
+
+        <div class="interactive-area">
+            <div class="uploader-section">
+                <p><strong>Paso 1:</strong> Elige una imagen</p>
+                <input id="image-selector" type="file" accept="image/*">
+                <img id="selected-image" src="#" alt="Vista previa de tu imagen">
+            </div>
+
+            <div class="prediction-section">
+                <p><strong>Paso 2:</strong> Haz clic en Predecir</p>
+                <button id="predict-button" disabled>Cargando Modelo...</button>
+                <div id="prediction-result">
+                    <p id="status">Por favor, carga el modelo y selecciona una imagen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cargar TensorFlow.js desde su CDN oficial -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <!-- Cargar nuestro script de lógica -->
+    <script src="script.js"></script>
+</body>
+</html>
