@@ -46,11 +46,11 @@ El objetivo es crear una herramienta de IA capaz de reconocer señas del alfabet
 ### Paso 1: Entrenamiento del Modelo (Google Colab)
 
 1. **Abrir el Notebook**
-   - Carga el archivo `.ipynb` en [Google Colab](https://colab.research.google.com/)
+   - Abrir el archivo [Google Colab](https://colab.research.google.com/drive/17bSw9mB1YmO7uqoXIh9Nrlb1dS2h5612?usp=sharing)
 
 2. **Configurar API de Kaggle**
    - Ve a tu perfil de Kaggle → Account → API → Create New API Token
-   - Descarga el archivo `kaggle.json`
+   - Descarga el archivo `kaggle.json` (que ya esta en la carpeta)
    - Súbelo cuando el notebook lo solicite
 
 3. **Habilitar GPU**
