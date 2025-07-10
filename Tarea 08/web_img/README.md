@@ -2,7 +2,7 @@
 
 Este proyecto implementa una Red Neuronal Convolucional (CNN) para clasificar imágenes de manos que representan letras y números del Lenguaje de Señas Americano (ASL). El modelo es entrenado en Google Colab, exportado a formato TensorFlow.js y desplegado como una aplicación web interactiva que se ejecuta completamente en el navegador del cliente.
 
-![Demo de la aplicación](web_img/demo.png)
+<img width="974" height="693" alt="Anotación 2025-07-10 134321" src="https://github.com/user-attachments/assets/242d2389-9a65-4e40-b200-dda75414ff7c" />
 *Captura de pantalla de la aplicación web en funcionamiento*
 
 ## Descripción del Proyecto
