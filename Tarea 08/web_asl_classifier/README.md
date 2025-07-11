@@ -68,44 +68,69 @@ El objetivo es crear una herramienta de IA capaz de reconocer señas del alfabet
    - Carpeta `tfjs_asl_model/` (modelo convertido)
    - Archivo `labels.json` (nombres de las clases)
 
-### Paso 2: Despliegue Web (Local)
+### Paso 2: Despliegue Web con Entorno Virtual Python 3.10 
 
-1. **Preparar el Proyecto**
-   ```bash
-   mkdir asl-classifier-webapp
-   cd asl-classifier-webapp
+Esta opción es ideal para usuarios de Windows que prefieren usar PowerShell y mantener un entorno Python aislado.
+
+1. **Verificar Instalación de Python 3.10**
+   ```powershell
+   python --version
+   ```
+   Si no tienes Python 3.10, descárgalo desde [python.org](https://www.python.org/downloads/)
+
+2. **Crear y Configurar el Proyecto**
+   ```powershell
+   # Crear directorio del proyecto
+   mkdir web_asl_classifier
+   cd web_asl_classifier
    ```
 
-2. **Extraer Archivos del Modelo**
-   - Descomprime el `.zip` descargado de Colab
-   - Copia `tfjs_asl_model/` y `labels.json` a tu carpeta del proyecto
-   - Asegúrate de tener `index.html`, `style.css` y `script.js`
+3. **Crear Entorno Virtual**
+   ```powershell
+   # Crear entorno virtual con Python 3.10
+   python -m venv venv_asl
+   ```
 
-3. **Iniciar Servidor Local**
+4. **Activar Entorno Virtual**
+   ```powershell
+   # Activar el entorno virtual
+   .\venv_asl\Scripts\Activate
+   ```
    
-   **Opción A: Con Python**
-   ```bash
+   > **Nota**: Si obtienes un error de política de ejecución, ejecuta:
+   ```powershell
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+   ```
+
+5. **Verificar Activación del Entorno**
+   ```powershell
+   # Deberías ver (venv_asl) al inicio de tu prompt
+   # Verificar que estás usando el Python correcto
+   python --version
+   which python
+   ```
+
+6. **Instalar Dependencias (Opcional)**
+   ```powershell
+   # Actualizar pip
+   python -m pip install --upgrade pip
+   ```
+
+7. **Iniciar Servidor Web**
+   ```powershell
+   # Servidor HTTP básico de Python
    python -m http.server 8000
    ```
-   
-   **Opción B: Con Node.js**
-   ```bash
-   npx http-server
-   ```
-   
-   **Opción C: Con VS Code**
-   - Instala la extensión "Live Server"
-   - Click derecho en `index.html` → "Open with Live Server"
-
-4. **Abrir la Aplicación**
-   - Navega a `http://localhost:8000`
-   - Sube una imagen de una seña ASL
-   - Haz clic en "Predecir"
+8. **Abrir la Aplicación**
+    ```powershell
+    # Abrir automáticamente en el navegador predeterminado
+    start http://localhost:8000
+    ```
 
 ## Estructura del Proyecto
 
 ```
-asl-classifier-webapp/
+web_asl_classifier/
 ├── tfjs_asl_model/           # Modelo TensorFlow.js
 │   ├── model.json            
 │   └── group1-shard*.bin     # 1 de 5 archivos binarios
@@ -113,9 +138,7 @@ asl-classifier-webapp/
 ├── index.html               # Estructura HTML
 ├── style.css                # Estilos CSS
 ├── script.js                # Lógica JavaScript + IA
-├── web_img/                 # Imágenes para documentación
-│   └── demo.png
-└── README.md                # Archivo actual
+└── README.md                # Este archivo de documentacion
 ```
 
 ## Análisis de Resultados
